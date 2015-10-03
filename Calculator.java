@@ -56,10 +56,10 @@ public class Calculator {
 
 	/**
 	 * This method raises the current result by the power of exponent.  Negative exponents are not supported. 
-	 * If a negative exponent is provided, it should be treated as though it were positive (i.e. use it's
+	 * If a negative exponent is provided, it is treated as though it were positive (i.e. uses the
 	 * absolute value)
 	 * 
-	 * For example: calculator.pow(-2) should be equal to calculator.pow(2)
+	 * For example: calculator.pow(-2) is equal to calculator.pow(2)
 	 * 
 	 * @param exponent the power to raise by
 	 * @return the current result raised by the power of exponent

@@ -83,6 +83,33 @@ public class CalculatorTest {
 		result = calculator.power(3);
 		assertEquals("raised 4 by power 3", 64, result);
 	}
+
+	@Test
+	public void keeps_track_of_running_results_after_exponentiation() {
+		Calculator calculator = new Calculator(2);
+		calculator.power(2);
+		calculator.power(3);
+		int result = calculator.getResult();
+		assertEquals("power 2 by power 2 then by power 3", 64, result);
+	}
+	
+	@Test
+	public void raising_to_power_of_one_gives_same_result() {
+		Calculator calculator = new Calculator(5);
+		int result = calculator.power(1);
+		assertEquals("raised 5 by power 1", 5, result);
+		result = calculator.getResult();
+		assertEquals("raised 5 by power 1", 5, result);
+	}
+	
+	@Test
+	public void raising_to_power_of_zero_gives_result_of_1() {
+		Calculator calculator = new Calculator(5);
+		int result = calculator.power(0);
+		assertEquals("raised 5 by power 0", 1, result);
+		result = calculator.getResult();
+		assertEquals("raised 5 by power 0", 1, result);
+	}
 	
 	@Test
 	public void treats_a_negative_exponent_as_positive() {
