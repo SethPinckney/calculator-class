@@ -90,7 +90,7 @@ public class CalculatorTest {
 		calculator.power(2);
 		calculator.power(3);
 		int result = calculator.getResult();
-		assertEquals("power 2 by power 2 then by power 3", 64, result);
+		assertEquals("raised 2 by power 2 then by power 3", 64, result);
 	}
 	
 	@Test
